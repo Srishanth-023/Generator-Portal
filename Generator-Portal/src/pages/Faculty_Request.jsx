@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { jsPDF } from 'jspdf';
-import logo from '../assets/kite-logo.webp'; 
+import logo from '../assets/kite-logo.png';
+import Kitelogo from '../assets/kite-logo.webp'; 
 import ipslogo from '../assets/ips.webp';
 
 const Template = () => {
@@ -107,7 +109,7 @@ const Template = () => {
       const logoWidth = 72;
       const logoHeight = 36;
       try {
-        pdf.addImage(logo, 'PNG', leftMargin + 8, yPos, logoWidth, logoHeight);
+        pdf.addImage(Kitelogo, 'PNG', leftMargin + 8, yPos, logoWidth, logoHeight);
       } catch (error) {
         console.log('Logo not loaded');
       }
@@ -397,9 +399,22 @@ const Template = () => {
     }
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-100 to-slate-200 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
+        {/* Back Button */}
+        <button
+          onClick={() => navigate('/')}
+          className="mb-4 flex items-center gap-2 text-blue-700 hover:text-blue-900 font-medium transition-colors"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Home
+        </button>
+
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-100 rounded-2xl shadow-lg mb-8 overflow-hidden">
           <div className="relative">
