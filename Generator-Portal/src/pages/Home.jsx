@@ -15,27 +15,27 @@ const LandingPage = () => {
           <div className="relative">
             <div className="h-2 bg-gradient-to-r from-blue-500 via-indigo-800 to-blue-900"></div>
 
-            <div className="p-6 flex flex-col md:flex-row justify-between items-center">
-              <div className="flex items-center space-x-4 mb-4 md:mb-0">
-                <div className="bg-white p-3 rounded-lg shadow-md border border-blue-100">
+            <div className="p-3 sm:p-6 flex flex-row justify-between items-center">
+              <div className="flex items-center space-x-2 sm:space-x-4">
+                <div className="bg-white p-1.5 sm:p-3 rounded-lg shadow-md border border-blue-100 flex-shrink-0">
                   <img
                     src={logo}
                     alt="KITE Logo"
-                    className="h-14 w-auto object-contain"
+                    className="h-8 sm:h-14 w-auto object-contain"
                   />
                 </div>
-                <div className="pl-2">
-                  <h2 className="text-2xl font-bold text-blue-900 tracking-tight">Letter Generator Portal</h2>
-                  <div className="flex items-center mt-1">
-                    <div className="h-1.5 w-1.5 bg-blue-500 rounded-full mr-2"></div>
-                    <p className="text-black-600 text-sm font-medium">KGiSL Institute of Technology</p>
+                <div className="pl-1 sm:pl-2 min-w-0">
+                  <h2 className="text-sm sm:text-2xl font-bold text-blue-900 tracking-tight truncate">Letter Generator Portal</h2>
+                  <div className="flex items-center mt-0.5 sm:mt-1">
+                    <div className="h-1 sm:h-1.5 w-1 sm:w-1.5 bg-blue-500 rounded-full mr-1 sm:mr-2 flex-shrink-0"></div>
+                    <p className="text-black-600 text-[10px] sm:text-sm font-medium truncate">KGiSL Institute of Technology</p>
                   </div>
                 </div>
               </div>
               <img
                 src={ipslogo}
                 alt="IPS Logo"
-                className="h-26 w-auto object-contain"
+                className="h-12 sm:h-24 w-auto object-contain flex-shrink-0 ml-2"
               />
             </div>
           </div>
@@ -144,27 +144,27 @@ const LandingPage = () => {
         </div>
 
         {/* Footer */}
-              <footer className="mt-12">
+              <footer className="mt-8 sm:mt-12">
                 <div className="max-w-5xl mx-auto">
-                  <div className="bg-white rounded-2xl shadow-xl p-6">
+                  <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                       <div className="flex items-center mb-4 md:mb-0">
-                        <span className="text-blue-600 font-mono text-xl mr-2">&lt;/&gt;</span>
-                        <h3 className="text-lg font-bold text-slate-800 tracking-tight">KGISL Institute of Technology</h3>
+                        <span className="text-blue-600 font-mono text-lg sm:text-xl mr-2">&lt;/&gt;</span>
+                        <h3 className="text-base sm:text-lg font-bold text-slate-800 tracking-tight">KGISL Institute of Technology</h3>
                       </div>
                     </div>
                     
-                    <div className="border-t border-gray-200 mt-6 pt-6">
+                    <div className="border-t border-gray-200 mt-4 sm:mt-6 pt-4 sm:pt-6">
                       <div className="flex flex-col md:flex-row justify-between items-center">
-                        <p className="text-gray-600 text-sm mb-4 md:mb-0">
+                        <p className="text-gray-600 text-xs sm:text-sm mb-4 md:mb-0 text-center md:text-left">
                           © {new Date().getFullYear()} KGISL Institute of Technology. All rights reserved.
                         </p>
-                        <p className="text-gray-500 text-sm flex items-center gap-2">
+                        <p className="text-gray-500 text-xs sm:text-sm flex items-center gap-2">
                         <span>Powered by IPS Tech Community</span>
                         <img
                           src={ipslogo}
                           alt="IPS Logo"
-                          className="h-7 w-auto object-contain"
+                          className="h-5 sm:h-7 w-auto object-contain"
                         />
                       </p>
                       </div>

@@ -536,32 +536,29 @@ const Template = () => {
             {/* Top accent bar */}
             <div className="h-2 bg-gradient-to-r from-blue-500 via-indigo-800 to-blue-900"></div>
             
-            <div className="p-6 flex flex-col md:flex-row justify-between items-center">
-              <div className="flex items-center space-x-4 mb-4 md:mb-0">
-                <div className="bg-white p-3 rounded-lg shadow-md border border-blue-100">
+            <div className="p-3 sm:p-6 flex flex-row justify-between items-center">
+              <div className="flex items-center space-x-2 sm:space-x-4">
+                <div className="bg-white p-1.5 sm:p-3 rounded-lg shadow-md border border-blue-100 flex-shrink-0">
                   <img 
                     src={logo} 
                     alt="KiTE Logo" 
-                    className="h-14 w-auto object-contain"
+                    className="h-8 sm:h-14 w-auto object-contain"
                   />
                 </div>
-                <div className="pl-2">
-                  <h2 className="text-2xl font-bold text-blue-900 tracking-tight">Event Approval Letter Generator</h2>
-                  <div className="flex items-center mt-1">
-                    <div className="h-1.5 w-1.5 bg-blue-500 rounded-full mr-2"></div>
-                    <p className="text-black-600 text-sm font-medium">co-<span className="text-red-600">K</span>reate your <span className="text-red-600">G</span>enius</p>
+                <div className="pl-1 sm:pl-2 min-w-0">
+                  <h2 className="text-[11px] sm:text-2xl font-bold text-blue-900 tracking-tight">Event Approval Letter Generator</h2>
+                  <div className="flex items-center mt-0.5 sm:mt-1">
+                    <div className="h-1 sm:h-1.5 w-1 sm:w-1.5 bg-blue-500 rounded-full mr-1 sm:mr-2 flex-shrink-0"></div>
+                    <p className="text-black-600 text-[10px] sm:text-sm font-medium">co-<span className="text-red-600">K</span>reate your <span className="text-red-600">G</span>enius</p>
                   </div>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-6">
-                
-                <img 
-                    src={ipsLogo} 
-                    alt="IPS Tech Logo" 
-                    className="h-27 w-auto object-contain"
-                  />
-              </div>
+              <img 
+                  src={ipsLogo} 
+                  alt="IPS Tech Logo" 
+                  className="h-12 sm:h-24 w-auto object-contain flex-shrink-0 ml-2"
+                />
             </div>
           </div>
         </div>
@@ -752,23 +749,25 @@ const Template = () => {
                 </div>
               </div>
 
-              <div className="mt-6 flex justify-between items-center">
+              <div className="mt-6 flex flex-row justify-between items-center gap-3 sm:gap-6">
                 <button
                   type="button"
                   onClick={resetForm}
                   disabled={isSubmitting || isGeneratingPdf}
-                  className="px-5 py-3 bg-white border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 flex items-center gap-2"
+                  className="px-3 sm:px-5 py-2.5 sm:py-3 bg-white border border-gray-300 rounded-lg shadow-sm text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 flex items-center gap-1 sm:gap-2 whitespace-nowrap"
                 >
-                  <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
-                  Reset Form
+                  <span className="hidden sm:inline">Reset Form</span>
+                  <span className="sm:hidden">Reset</span>
                 </button>
-                <button type="button" onClick={generateApprovalLetterPdf} disabled={isGeneratingPdf} className="px-5 py-3 bg-gradient-to-r from-blue-500 to-sky-600 hover:from-blue-600 hover:to-sky-700 border border-transparent rounded-lg shadow-md text-sm font-medium text-white transition-all duration-200 flex items-center gap-2">
-                  <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button type="button" onClick={generateApprovalLetterPdf} disabled={isGeneratingPdf} className="px-3 sm:px-5 py-2.5 sm:py-3 bg-gradient-to-r from-blue-500 to-sky-600 hover:from-blue-600 hover:to-sky-700 border border-transparent rounded-lg shadow-md text-xs sm:text-sm font-medium text-white transition-all duration-200 flex items-center gap-1 sm:gap-2 whitespace-nowrap">
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
-                  {isGeneratingPdf ? 'Generating Approval PDF...' : 'Generate Approval Letter PDF'}
+                  <span className="hidden sm:inline">{isGeneratingPdf ? 'Generating PDF...' : 'Generate Letter PDF'}</span>
+                  <span className="sm:hidden">{isGeneratingPdf ? 'Generating...' : 'Generate PDF'}</span>
                 </button>
               </div>
             </div>
@@ -777,27 +776,26 @@ const Template = () => {
       </div>
       
       {/* Simple Footer - Matching Header Style */}
-      <footer className="mt-12">
+      <footer className="mt-8 sm:mt-12">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl p-6">
+          <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              {/* Logo */}
               <div className="flex items-center mb-4 md:mb-0">
-                <span className="text-blue-600 font-mono text-xl mr-2">&lt;/&gt;</span>
-                <h3 className="text-lg font-bold text-slate-800 tracking-tight">KGISL Institute of Technology</h3>
+                <span className="text-blue-600 font-mono text-lg sm:text-xl mr-2">&lt;/&gt;</span>
+                <h3 className="text-base sm:text-lg font-bold text-slate-800 tracking-tight">KGISL Institute of Technology</h3>
               </div>
             
               
             </div>
             
-            <div className="border-t border-gray-200 mt-6 pt-6">
+            <div className="border-t border-gray-200 mt-4 sm:mt-6 pt-4 sm:pt-6">
               <div className="flex flex-col md:flex-row justify-between items-center">
-                <p className="text-gray-600 text-sm mb-4 md:mb-0">
+                <p className="text-gray-600 text-xs sm:text-sm mb-4 md:mb-0 text-center md:text-left">
                   © {new Date().getFullYear()} KGISL Institute of Technology. All rights reserved.
                 </p>
-                <p className="text-gray-500 text-sm flex items-center space-x-3">
+                <p className="text-gray-500 text-xs sm:text-sm flex items-center space-x-2 sm:space-x-3">
                   <span>Powered by IPS Tech Community</span>
-                  <img src={ipsLogo} alt="IPS Tech" className="h-7 w-auto object-contain" />
+                  <img src={ipsLogo} alt="IPS Tech" className="h-5 sm:h-7 w-auto object-contain" />
                 </p>
               </div>
             </div>
