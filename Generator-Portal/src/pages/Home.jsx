@@ -43,23 +43,23 @@ const LandingPage = () => {
 
         {/* Main Content Card */}
         <div className="shadow-xl rounded-2xl overflow-hidden">
-          <div className="bg-gradient-to-r from-sky-900 to-blue-700 px-8 py-6">
-            <h1 className="text-white text-3xl font-bold tracking-tight">Choose Your Letter Type</h1>
-            <p className="text-blue-50 text-sm mt-1">Select the type of letter you need to generate</p>
+          <div className="bg-gradient-to-r from-sky-900 to-blue-700 px-4 sm:px-8 py-4 sm:py-6">
+            <h1 className="text-white text-xl sm:text-3xl font-bold tracking-tight">Choose Your Letter Type</h1>
+            <p className="text-blue-50 text-xs sm:text-sm mt-1">Select the type of letter you need to generate</p>
           </div>
 
-          <div className="px-8 py-8 space-y-6 bg-gradient-to-br from-blue-50 to-sky-50">
+          <div className="px-4 sm:px-8 py-4 sm:py-8 space-y-4 sm:space-y-6 bg-gradient-to-br from-blue-50 to-sky-50">
 
             {/* Faculty Request Button */}
             <button
               onClick={() => navigate("/Faculty_Request")}
-              className="group w-full bg-white rounded-xl p-6 flex flex-col md:flex-row items-center gap-5 shadow-md border border-blue-100 hover:shadow-xl transition-all hover:-translate-y-1 relative overflow-hidden"
+              className="group w-full bg-white rounded-xl p-3 sm:p-6 flex flex-row items-center gap-3 sm:gap-5 shadow-md border border-blue-100 hover:shadow-xl transition-all hover:-translate-y-1 relative overflow-hidden"
             >
-              <span className="absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b from-blue-500 to-indigo-800 group-hover:w-2 transition-all"></span>
+              <span className="absolute left-0 top-0 h-full w-1 sm:w-1.5 bg-gradient-to-b from-blue-500 to-indigo-800 group-hover:w-1.5 sm:group-hover:w-2 transition-all"></span>
 
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-800 to-blue-900 flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-500 via-indigo-800 to-blue-900 flex items-center justify-center shadow-lg flex-shrink-0">
                 <svg
-                  className="w-8 h-8 text-white"
+                  className="w-5 h-5 sm:w-8 sm:h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -72,18 +72,18 @@ const LandingPage = () => {
                 </svg>
               </div>
 
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-xl font-bold text-blue-900 tracking-tight">
+              <div className="flex-1 text-left min-w-0">
+                <h3 className="text-sm sm:text-xl font-bold text-blue-900 tracking-tight">
                   Faculty Request Letter
                 </h3>
-                <p className="text-gray-600 text-sm mt-1">
+                <p className="text-gray-600 text-xs sm:text-sm mt-0.5 sm:mt-1">
                   Generate official request letters for faculty members
                 </p>
               </div>
 
-              <div className="w-11 h-11 rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-blue-100 group-hover:translate-x-2 transition-all">
+              <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-blue-100 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-all flex-shrink-0">
                 <svg
-                  className="w-5 h-5 text-blue-600"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -98,13 +98,13 @@ const LandingPage = () => {
             {/* Event Approval Button */}
             <button
               onClick={() => navigate("/Event_Approval")}
-              className="group w-full bg-white rounded-xl p-6 flex flex-col md:flex-row items-center gap-5 shadow-md border border-blue-100 hover:shadow-xl transition-all hover:-translate-y-1 relative overflow-hidden"
+              className="group w-full bg-white rounded-xl p-3 sm:p-6 flex flex-row items-center gap-3 sm:gap-5 shadow-md border border-blue-100 hover:shadow-xl transition-all hover:-translate-y-1 relative overflow-hidden"
             >
-              <span className="absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b from-blue-500 to-indigo-800 group-hover:w-2 transition-all"></span>
+              <span className="absolute left-0 top-0 h-full w-1 sm:w-1.5 bg-gradient-to-b from-blue-500 to-indigo-800 group-hover:w-1.5 sm:group-hover:w-2 transition-all"></span>
 
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-800 to-blue-900 flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-500 via-indigo-800 to-blue-900 flex items-center justify-center shadow-lg flex-shrink-0">
                 <svg
-                  className="w-8 h-8 text-white"
+                  className="w-5 h-5 sm:w-8 sm:h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -117,16 +117,16 @@ const LandingPage = () => {
                 </svg>
               </div>
 
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-xl font-bold text-blue-900 tracking-tight">
+              <div className="flex-1 text-left min-w-0">
+                <h3 className="text-sm sm:text-xl font-bold text-blue-900 tracking-tight">
                   Event Approval Letter
                 </h3>
-                <p className="text-gray-600 text-sm mt-1">
+                <p className="text-gray-600 text-xs sm:text-sm mt-0.5 sm:mt-1">
                   Generate approval letters for events and activities
                 </p>
               </div>
 
-              <div className="w-11 h-11 rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-blue-100 group-hover:translate-x-2 transition-all">
+              <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-blue-100 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-all flex-shrink-0">
                 <svg
                   className="w-5 h-5 text-blue-600"
                   fill="none"
@@ -144,27 +144,27 @@ const LandingPage = () => {
         </div>
 
         {/* Footer */}
-              <footer className="mt-8 sm:mt-12">
+              <footer className="mt-6 sm:mt-12">
                 <div className="max-w-5xl mx-auto">
-                  <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6">
-                    <div className="flex flex-col md:flex-row justify-between items-center">
-                      <div className="flex items-center mb-4 md:mb-0">
-                        <span className="text-blue-600 font-mono text-lg sm:text-xl mr-2">&lt;/&gt;</span>
-                        <h3 className="text-base sm:text-lg font-bold text-slate-800 tracking-tight">KGISL Institute of Technology</h3>
+                  <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-3 sm:p-6">
+                    <div className="flex flex-row justify-between items-center">
+                      <div className="flex items-center">
+                        <span className="text-blue-600 font-mono text-sm sm:text-xl mr-1 sm:mr-2">&lt;/&gt;</span>
+                        <h3 className="text-xs sm:text-lg font-bold text-slate-800 tracking-tight">KGISL Institute of Technology</h3>
                       </div>
                     </div>
                     
-                    <div className="border-t border-gray-200 mt-4 sm:mt-6 pt-4 sm:pt-6">
-                      <div className="flex flex-col md:flex-row justify-between items-center">
-                        <p className="text-gray-600 text-xs sm:text-sm mb-4 md:mb-0 text-center md:text-left">
+                    <div className="border-t border-gray-200 mt-2 sm:mt-6 pt-2 sm:pt-6">
+                      <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
+                        <p className="text-gray-600 text-[10px] sm:text-sm text-center sm:text-left">
                           © {new Date().getFullYear()} KGISL Institute of Technology. All rights reserved.
                         </p>
-                        <p className="text-gray-500 text-xs sm:text-sm flex items-center gap-2">
+                        <p className="text-gray-500 text-[10px] sm:text-sm flex items-center gap-1 sm:gap-2">
                         <span>Powered by IPS Tech Community</span>
                         <img
                           src={ipslogo}
                           alt="IPS Logo"
-                          className="h-5 sm:h-7 w-auto object-contain"
+                          className="h-4 sm:h-7 w-auto object-contain"
                         />
                       </p>
                       </div>

@@ -775,27 +775,25 @@ const Template = () => {
         </div>
       </div>
       
-      {/* Simple Footer - Matching Header Style */}
-      <footer className="mt-8 sm:mt-12">
+      {/* Footer */}
+      <footer className="mt-6 sm:mt-12">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="flex items-center mb-4 md:mb-0">
-                <span className="text-blue-600 font-mono text-lg sm:text-xl mr-2">&lt;/&gt;</span>
-                <h3 className="text-base sm:text-lg font-bold text-slate-800 tracking-tight">KGISL Institute of Technology</h3>
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-3 sm:p-6">
+            <div className="flex flex-row justify-between items-center">
+              <div className="flex items-center">
+                <span className="text-blue-600 font-mono text-sm sm:text-xl mr-1 sm:mr-2">&lt;/&gt;</span>
+                <h3 className="text-xs sm:text-lg font-bold text-slate-800 tracking-tight">KGISL Institute of Technology</h3>
               </div>
-            
-              
             </div>
             
-            <div className="border-t border-gray-200 mt-4 sm:mt-6 pt-4 sm:pt-6">
-              <div className="flex flex-col md:flex-row justify-between items-center">
-                <p className="text-gray-600 text-xs sm:text-sm mb-4 md:mb-0 text-center md:text-left">
+            <div className="border-t border-gray-200 mt-2 sm:mt-6 pt-2 sm:pt-6">
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
+                <p className="text-gray-600 text-[10px] sm:text-sm text-center sm:text-left">
                   © {new Date().getFullYear()} KGISL Institute of Technology. All rights reserved.
                 </p>
-                <p className="text-gray-500 text-xs sm:text-sm flex items-center space-x-2 sm:space-x-3">
+                <p className="text-gray-500 text-[10px] sm:text-sm flex items-center gap-1 sm:gap-2">
                   <span>Powered by IPS Tech Community</span>
-                  <img src={ipsLogo} alt="IPS Tech" className="h-5 sm:h-7 w-auto object-contain" />
+                  <img src={ipsLogo} alt="IPS Tech" className="h-4 sm:h-7 w-auto object-contain" />
                 </p>
               </div>
             </div>
