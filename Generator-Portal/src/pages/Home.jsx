@@ -7,8 +7,8 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-100 to-slate-200 py-10 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-b from-slate-100 to-slate-200 py-6 sm:py-10 px-4 sm:px-6 lg:px-8 flex flex-col">
+      <div className="max-w-5xl mx-auto w-full flex flex-col flex-1">
 
         {/* Header - Matching Faculty/Event style */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-100 rounded-2xl shadow-lg mb-8 overflow-hidden">
@@ -42,24 +42,24 @@ const LandingPage = () => {
         </div>
 
         {/* Main Content Card */}
-        <div className="shadow-xl rounded-2xl overflow-hidden">
+        <div className="shadow-xl rounded-2xl overflow-hidden flex-1 flex flex-col">
           <div className="bg-gradient-to-r from-sky-900 to-blue-700 px-4 sm:px-8 py-4 sm:py-6">
             <h1 className="text-white text-xl sm:text-3xl font-bold tracking-tight">Choose Your Letter Type</h1>
             <p className="text-blue-50 text-xs sm:text-sm mt-1">Select the type of letter you need to generate</p>
           </div>
 
-          <div className="px-4 sm:px-8 py-4 sm:py-8 space-y-4 sm:space-y-6 bg-gradient-to-br from-blue-50 to-sky-50">
+          <div className="px-4 sm:px-8 py-6 sm:py-8 space-y-5 sm:space-y-6 bg-gradient-to-br from-blue-50 to-sky-50 flex-1 flex flex-col justify-center">
 
             {/* Faculty Request Button */}
             <button
               onClick={() => navigate("/Faculty_Request")}
-              className="group w-full bg-white rounded-xl p-3 sm:p-6 flex flex-row items-center gap-3 sm:gap-5 shadow-md border border-blue-100 hover:shadow-xl transition-all hover:-translate-y-1 relative overflow-hidden"
+              className="group w-full bg-white rounded-2xl sm:rounded-xl p-6 sm:p-6 flex flex-row items-center gap-5 sm:gap-5 shadow-lg border border-blue-100 hover:shadow-xl transition-all hover:-translate-y-1 relative overflow-hidden"
             >
-              <span className="absolute left-0 top-0 h-full w-1 sm:w-1.5 bg-gradient-to-b from-blue-500 to-indigo-800 group-hover:w-1.5 sm:group-hover:w-2 transition-all"></span>
+              <span className="absolute left-0 top-0 h-full w-2 sm:w-1.5 bg-gradient-to-b from-blue-500 to-indigo-800 group-hover:w-2.5 sm:group-hover:w-2 transition-all"></span>
 
-              <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-500 via-indigo-800 to-blue-900 flex items-center justify-center shadow-lg flex-shrink-0">
+              <div className="w-20 h-20 sm:w-16 sm:h-16 rounded-2xl sm:rounded-xl bg-gradient-to-br from-blue-500 via-indigo-800 to-blue-900 flex items-center justify-center shadow-lg flex-shrink-0">
                 <svg
-                  className="w-5 h-5 sm:w-8 sm:h-8 text-white"
+                  className="w-10 h-10 sm:w-8 sm:h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -73,17 +73,17 @@ const LandingPage = () => {
               </div>
 
               <div className="flex-1 text-left min-w-0">
-                <h3 className="text-sm sm:text-xl font-bold text-blue-900 tracking-tight">
+                <h3 className="text-lg sm:text-xl font-bold text-blue-900 tracking-tight">
                   Faculty Request Letter
                 </h3>
-                <p className="text-gray-600 text-xs sm:text-sm mt-0.5 sm:mt-1">
+                <p className="text-gray-600 text-base sm:text-sm mt-1.5 sm:mt-1">
                   Generate official request letters for faculty members
                 </p>
               </div>
 
-              <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-blue-100 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-all flex-shrink-0">
+              <div className="w-14 h-14 sm:w-11 sm:h-11 rounded-xl sm:rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-blue-100 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-all flex-shrink-0">
                 <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600"
+                  className="w-7 h-7 sm:w-5 sm:h-5 text-blue-600"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -98,13 +98,13 @@ const LandingPage = () => {
             {/* Event Approval Button */}
             <button
               onClick={() => navigate("/Event_Approval")}
-              className="group w-full bg-white rounded-xl p-3 sm:p-6 flex flex-row items-center gap-3 sm:gap-5 shadow-md border border-blue-100 hover:shadow-xl transition-all hover:-translate-y-1 relative overflow-hidden"
+              className="group w-full bg-white rounded-2xl sm:rounded-xl p-6 sm:p-6 flex flex-row items-center gap-5 sm:gap-5 shadow-lg border border-blue-100 hover:shadow-xl transition-all hover:-translate-y-1 relative overflow-hidden"
             >
-              <span className="absolute left-0 top-0 h-full w-1 sm:w-1.5 bg-gradient-to-b from-blue-500 to-indigo-800 group-hover:w-1.5 sm:group-hover:w-2 transition-all"></span>
+              <span className="absolute left-0 top-0 h-full w-2 sm:w-1.5 bg-gradient-to-b from-blue-500 to-indigo-800 group-hover:w-2.5 sm:group-hover:w-2 transition-all"></span>
 
-              <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-500 via-indigo-800 to-blue-900 flex items-center justify-center shadow-lg flex-shrink-0">
+              <div className="w-20 h-20 sm:w-16 sm:h-16 rounded-2xl sm:rounded-xl bg-gradient-to-br from-blue-500 via-indigo-800 to-blue-900 flex items-center justify-center shadow-lg flex-shrink-0">
                 <svg
-                  className="w-5 h-5 sm:w-8 sm:h-8 text-white"
+                  className="w-10 h-10 sm:w-8 sm:h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -118,17 +118,17 @@ const LandingPage = () => {
               </div>
 
               <div className="flex-1 text-left min-w-0">
-                <h3 className="text-sm sm:text-xl font-bold text-blue-900 tracking-tight">
+                <h3 className="text-lg sm:text-xl font-bold text-blue-900 tracking-tight">
                   Event Approval Letter
                 </h3>
-                <p className="text-gray-600 text-xs sm:text-sm mt-0.5 sm:mt-1">
+                <p className="text-gray-600 text-base sm:text-sm mt-1.5 sm:mt-1">
                   Generate approval letters for events and activities
                 </p>
               </div>
 
-              <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-blue-100 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-all flex-shrink-0">
+              <div className="w-14 h-14 sm:w-11 sm:h-11 rounded-xl sm:rounded-xl bg-slate-100 flex items-center justify-center group-hover:bg-blue-100 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-all flex-shrink-0">
                 <svg
-                  className="w-5 h-5 text-blue-600"
+                  className="w-7 h-7 sm:w-5 sm:h-5 text-blue-600"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -144,7 +144,7 @@ const LandingPage = () => {
         </div>
 
         {/* Footer */}
-              <footer className="mt-6 sm:mt-12">
+              <footer className="mt-auto pt-4 sm:mt-12">
                 <div className="max-w-5xl mx-auto">
                   <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-3 sm:p-6">
                     <div className="flex flex-row justify-between items-center">
